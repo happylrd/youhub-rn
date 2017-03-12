@@ -17,6 +17,7 @@ import {
 import TabNavigator from 'react-native-tab-navigator';
 import Boy from './Boy';
 import ListViewTest from './ListViewTest';
+import FetchTest from './FetchTest'
 
 export default class YouHub extends Component {
     constructor(props) {
@@ -78,7 +79,8 @@ export default class YouHub extends Component {
                  return <Component navigator={navigator} {...route.params}/>
                  }}
                  ></Navigator>*/}
-                <ListViewTest/>
+                {/*<ListViewTest/>*/}
+                <FetchTest/>
             </View>
         );
     }
