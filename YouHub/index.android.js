@@ -9,12 +9,14 @@ import {
     AppRegistry,
     StyleSheet,
     Image,
+    ListView,
     Navigator,
     Text,
     View
 } from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
 import Boy from './Boy';
+import ListViewTest from './ListViewTest';
 
 export default class YouHub extends Component {
     constructor(props) {
@@ -66,16 +68,17 @@ export default class YouHub extends Component {
                  onPress={() => this.setState({ selectedTab: 'tab_my' })}>
                  <View style={styles.page2}></View>
                  </TabNavigator.Item>
-                 </TabNavigator>*/}
-                <Navigator
-                    initialRoute={{
-                        component: Boy
-                    }}
-                    renderScene={(route, navigator) => {
-                        let Component = route.component;
-                        return <Component navigator={navigator} {...route.params}/>
-                    }}
-                ></Navigator>
+                 </TabNavigator>
+                 <Navigator
+                 initialRoute={{
+                 component: Boy
+                 }}
+                 renderScene={(route, navigator) => {
+                 let Component = route.component;
+                 return <Component navigator={navigator} {...route.params}/>
+                 }}
+                 ></Navigator>*/}
+                <ListViewTest/>
             </View>
         );
     }
